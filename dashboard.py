@@ -99,34 +99,3 @@ def addEmployee():
     # save data
     driver.find_element(By.XPATH, "//button[normalize-space()='Save']").click()
     time.sleep(2)
-
-
-def changeEpass():
-    # Open Dropdown menu
-    dropDown = driver.find_element(By.CSS_SELECTOR, ".oxd-userdropdown-name")
-    dropDown.click()
-    time.sleep(2)
-
-    # Ondropdown, click on change password
-    driver.find_element(
-        By.XPATH, "//a[normalize-space()='Change Password']").click()
-    time.sleep(2)
-    # Enter Current Password
-    current_pass = driver.find_element(
-        By.XPATH, "//div[@class='oxd-form-row']//div[@class='oxd-grid-2 orangehrm-full-width-grid']//div[@class='oxd-grid-item oxd-grid-item--gutters']//div[@class='oxd-input-group oxd-input-field-bottom-space']//div//input[@type='password']")
-    current_pass.send_keys(EmpPass)
-    time.sleep(1)
-    # Enter New Password
-    new_pass = driver.find_element(
-        By.XPATH, "//div[@class='oxd-grid-item oxd-grid-item--gutters user-password-cell']//div[@class='oxd-input-group oxd-input-field-bottom-space']//div//input[@type='password']")
-    new_pass.send_keys(EmChangepass)
-    time.sleep(1)
-    # Confirm Password
-    confirm_pass = driver.find_element(
-        By.XPATH, "//div[@class='oxd-form-row user-password-row']//div[@class='oxd-grid-2 orangehrm-full-width-grid']//div[@class='oxd-grid-item oxd-grid-item--gutters']//div[@class='oxd-input-group oxd-input-field-bottom-space']//div//input[@type='password']")
-    confirm_pass.send_keys(EmChangepass)
-    time.sleep(1)
-    # Click Submit Button
-    submit = driver.find_element(
-        By.CSS_SELECTOR, "button[type='submit']").click()
-    time.sleep(5)
