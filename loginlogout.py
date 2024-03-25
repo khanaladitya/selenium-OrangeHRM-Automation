@@ -20,13 +20,11 @@ def AdminLogin():
 
 
 def Logout():
-
     dropdown = driver.find_element(
         By.XPATH, "//span[@class='oxd-userdropdown-tab']")
     dropdown.click()
-    time.sleep(2)
-    logoutbutton = driver.find_element(
-        By.CSS_SELECTOR, "body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > header:nth-child(2) > div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > a:nth-child(1)")
+    logoutbutton = WebDriverWait(driver, 10).until(EC.visibility_of_element_located(
+        (By.CSS_SELECTOR, " body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > header:nth-child(2) > div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > a:nth-child(1)")))
     logoutbutton.click()
     time.sleep(2)
 
