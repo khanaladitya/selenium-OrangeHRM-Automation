@@ -1,5 +1,5 @@
 from config import *
-from dashboard import *
+from Employee import *
 from loginlogout import *
 from buzz import *
 
