@@ -1,5 +1,5 @@
 from config import *
-from dashboard import *
+from Employee import *
 from loginlogout import *
 
 
@@ -20,7 +20,6 @@ def postOnBuzz():
     post = driver.find_element(By.CSS_SELECTOR, "button[type='submit']")
     post.click()
     time.sleep(2)
-
 
 def adminActionOnbuzz():
     # Click on Buzz
