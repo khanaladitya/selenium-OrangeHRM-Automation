@@ -1,14 +1,14 @@
 from config import *
-from dashboard import *
+from Employee import *
 from loginlogout import *
 from buzz import *
 from myinfo import *
 
 BrowserCall()
 time.sleep(3)
+
 AdminLogin()
 time.sleep(2)
-
 
 addEmployee()
 time.sleep(2)
